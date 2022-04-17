@@ -10,9 +10,10 @@ public class RouteCipherTest
         // You can try your own examples, but if you do not input the correct text, key and table sizes in the methods below, the program will print
         // the result correctly, but it will look strange to you. (You can check yourself)
         RouteCipher cipher = new RouteCipher(0);
-        System.out.println(cipher.encrypt("THISISTHEPLAINTEXT")); //THISISTHEPLAINTEXT
-        System.out.println(cipher.decrypt("TIEIXTXXEAHSIHSPNTLT"));
-        //System.out.println(cipher.decrypt("XTEANITROBATSYVNTEDXOEHOMEHSOESPBUI"));
-        //System.out.println(cipher.toString());
+        // System.out.println(cipher.encrypt("ABORT THE MISSION, YOU HAVE BEEN SPOTTED!")); // 7 rows or 5 columns to get the example in the homework
+        // System.out.println(cipher.decrypt("XTEANITROBATSYVNTEDXOEHOMEHSOESPBUI")); // -7 rows or -5 columns to get the example in the homework
+        // System.out.println(cipher.encrypt("THISISTHEPLAINTEXT")); // 4 columns to get the example in the homework
+        // System.out.println(cipher.decrypt("TIEIXTXXEAHSIHSPNTLT")); // 4 columns to get the example in the homework
+        System.out.println(cipher.toString());
     }
 }

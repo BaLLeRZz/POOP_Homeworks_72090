@@ -363,9 +363,6 @@ public class RouteCipher
             {
                 for (int j = 0; j < columnNumber; j++)
                 {
-                    if (decryptedTextTable[i][j] != 'X')
-                        decryptedText += decryptedTextTable[i][j];
-
                     System.out.print(decryptedTextTable[i][j] + " ");
                 }
                 System.out.println();
@@ -431,15 +428,24 @@ public class RouteCipher
             {
                 for (int j = 0; j < columnNumber; j++)
                 {
-                    if (decryptedTextTable[i][j] != 'X')
-                        decryptedText += decryptedTextTable[i][j];
-
                     System.out.print(decryptedTextTable[i][j] + " ");
                 }
                 System.out.println();
             }
         }
 
+        boolean xLetters = true;
+        for (int i = rowNumber - 1; i >= 0; i--)
+        {
+            for (int j = columnNumber - 1; j >= 0; j--)
+            {
+                if (decryptedTextTable[i][j] == 'X' && xLetters)
+                    continue;
+
+                xLetters = false;
+                decryptedText = decryptedTextTable[i][j] + decryptedText;
+            }
+        }
         System.out.print("\nDecrypted text: ");
         return decryptedText;
     }
